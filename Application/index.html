@@ -27,41 +27,16 @@
                     <div class="next-steps-body">
                         <div>
                             <h1><a href="https://felix-z.com/community/#devops">Choose a developer</a></h1>
-                            <form id="form1" runat="server">
-                                <div class="container">
-                                    <div class="main">
-                                        <h2>
-                                            Javascript Login Form Validation</h2>
-                                        <form id="form_id" method="post" name="myform">
-                                        <label>
-                                            User Name :</label>
-                                        <input type="text" name="username" id="username" />
-                                        <br><br>
-                                        <label>
-                                            Password :</label>
-                                        <input type="password" name="password" id="password" />
-                                        <input type="button" value="Login" id="submit" onclick="validate();" />
-                                        </form>
-                                    </div>
-                                </div>
-                                </form>
 
-                                <script language = "JavaScript">
-                                    function validate() {
-                                        var username = document.getElementById("username").value;
-                                        var password = document.getElementById("password").value;
-                                        if (username == null || username == "") {
-                                            alert("Please enter the username.");
-                                            return false;
-                                        }
-                                        if (password == null || password == "") {
-                                            alert("Please enter the password.");
-                                            return false;
-                                        }
-                                        alert('Login successful');
-                                        
-                                    } 
-                            </script>
+    <h1>Register</h1>
+    <form action="signup.php" method="POST">
+      Username: <input type="text" name="username" /><br />
+      Email: <input type="text" name="email" /><br />
+      Password: <input type="text" name="password" /><br />
+      Confirm password: <input type="text" name="password_confirm" /><br />
+      <input type="submit" value="Register" />
+    </form>
+
 </body>
 
 </html>
