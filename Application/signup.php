@@ -1,15 +1,15 @@
 <?php
+$servername = "sql12.freesqldatabase.com";
+$username = "sql12.freesqldatabase.com";
+$password = "vEzQWrl92P";
 
-$data = $_POST;
+// Create connection
+$conn = new mysqli($servername, $username, $password);
 
-if (empty($data['username']) ||
-    empty($data['password']) ||
-    empty($data['email']) ||
-    empty($data['password_confirm'])) {
-    
-    die('Please fill all required fields!');
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
 }
+echo "Connected successfully";
 
-if ($data['password'] !== $data['password_confirm']) {
-   die('Password and Confirm password should match!');   
-}
+?>
